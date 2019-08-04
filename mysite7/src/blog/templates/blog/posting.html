@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{# form: 제네릭뷰가 넘겨준 폼객체 #}
+{# form.as_p, as_ul, as_table 함수로 HTML코드 변환 및 출력#}
+
+<h3>글 작성 페이지</h3>
+<form action='' method=''>
+	{% csrf_token %}
+	<table width=50%>
+		{{ form.as_table }}
+	</table>
+	<input type="submit" value="갱신">
+
+</form>
+{% endblock %}
